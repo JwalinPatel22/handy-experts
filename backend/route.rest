@@ -1,0 +1,85 @@
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+    "name": "probably1234",
+    "email": "1234@yess.com",
+    "password": "11111111"
+}
+
+###
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email" : "1234@yess.com",
+    "password" : "11111111"
+}
+###
+
+GET http://localhost:3000/api/allUsers
+
+
+###
+
+POST http://localhost:3000/api/product/
+Content-Type: application/json
+
+{
+    "title": "ASUS ROG Strix Z490-E Gaming",
+    "brand": "ASUS",
+    "description": "Advanced motherboard for gaming and overclocking",
+    "price": 28000,
+    "qty": 8
+}
+
+###
+
+GET http://localhost:3000/api/products/
+
+
+###
+POST http://localhost:3000/api/login 
+Content-Type: application/json
+
+{
+    "email" : "e@mail.com",
+    "password": "asdfasdf"
+}
+
+###
+GET  http://localhost:3000/api/product/66700639e99b021f5d2f9e16
+
+###
+
+POST http://localhost:3000/api/cart/add/
+Content-Type: application/json
+ 
+{
+    "userId": "667d31e629e2744ced1e03f1",
+    "productId": "66700685e99b021f5d2f9e22"
+}
+
+
+###
+
+PUT http://localhost:3000/api/cart/update/
+Content-Type: application/json
+ 
+{
+    "userId": "667172b7402a5aa71991b574",
+    "productId": "66700685e99b021f5d2f9e22",
+    "qty" : 5
+}
+
+###
+
+POST http://localhost:3000/admin/newAdmin
+Content-Type: application/json
+
+{
+    "adminName": "Admin 1",
+    "adminEmail": "1@admin.com",
+    "password": "11111111"
+}
