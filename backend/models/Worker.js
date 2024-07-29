@@ -28,6 +28,19 @@ const workerSchema = new mongoose.Schema({
     default: Date.now,
   },
 
+  status: {
+    type: String,
+    Enum: ["Available", "Not_Available", "Booked"],
+  },
+
+  services: [
+    {
+      serviceId: {
+        type: mongoose.Types.ObjectId,
+        ref: "Service",
+      },
+    },
+  ],
 });
 
 const Worker = mongoose.model("Worker", workerSchema);

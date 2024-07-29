@@ -27,6 +27,11 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+
+  address: {
+    type: String,
+    required: true,
+  }
 });
 
 const User = mongoose.model("User", userSchema);

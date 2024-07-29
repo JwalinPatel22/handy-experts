@@ -2,8 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
-const productRoutes = require("./routes/productRoutes");
-const cartRoutes = require("./routes/cartRoutes");
+const serviceRoutes = require("./routes/serviceRoutes");
 const adminRoutes = require("./routes/adminRoutes");
 const cors = require("cors");
 require("dotenv").config();
@@ -23,8 +22,7 @@ app.use(
 
 //routes
 app.use("/api", userRoutes);
-app.use("/api", productRoutes);
-app.use("/api/cart", cartRoutes);
+app.use("/api", serviceRoutes);
 app.use("/admin", adminRoutes);
 
 app.listen(3000, function (req, res) {
