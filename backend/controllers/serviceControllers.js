@@ -14,7 +14,25 @@ const getService = async function (req, res) {
   }
 };
 
+const createService = async function (req, res) {
+  const { title, type, description, cost, availability } = req.body;
+  const newService = new Service({
+    title,
+    type,
+    description,
+    cost,
+    availability,
+  });
+
+  try {
+    await newService.save();
+  } catch (error) {
+    console.log("Error creating service: ", error);
+  }
+};
+
 module.exports = {
   getAllServices,
   getService,
+  createService,
 };
